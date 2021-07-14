@@ -4,13 +4,18 @@
 '''
 
 from page import Page
-from bs4 import BeautifulSoup
 
 
 def main():
     page_list = []
-    hello = Page("")
-    pass
+
+    # Testing Purposes
+    hello = Page(
+        "https://en.wikipedia.org/wiki/Gunilla_Carlsson")
+    hello.populateLinks()
+    hello.getName()
+    for i in hello.links:
+        print(i)
 
 
 if __name__ == '__main__':
